@@ -8,7 +8,7 @@ export default function EstatusVenta({ id }) {
 
         try {
             // Llamada a la API para cancelar la venta
-            const url = `http://localhost:3000/actualizarEstatusVenta/${id}`;
+            const url = `http://localhost:3000/ventas/actualizarEstatusVenta/${id}`;
             const response = await axios.patch(url);
 
             if (response.data.success) {

@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default function BorrarProducto({id}){
     async function borrar() {
-        const url = "http://localhost:3000/borrarProducto/"+id;
+        const url = "http://localhost:3000/productos/borrarProducto/"+id;
     
         const respuesta = await axios.delete(url);
         window.location.replace("/productos/mostrar");

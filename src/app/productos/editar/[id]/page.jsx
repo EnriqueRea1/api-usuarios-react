@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation"; // Para navegar y obtener el ID de 
 // Función para obtener los datos del usuario
 async function getProducto(id) {
     try {
-      const url = `http://localhost:3000/buscarProductoPorId/${id}`;
+      const url = `http://localhost:3000/productos/buscarProductoPorId/${id}`;
       const producto = await axios.get(url);
       console.log("Datos obtenidos del producto:", producto.data); // Agregar log aquí
       return producto.data;
@@ -24,7 +24,7 @@ async function actualizarProducto(e, id, datosProducto) {
   e.preventDefault();
   try {
     console.log("Actualizando producto...");
-    const url = `http://localhost:3000/actualizarProducto/${id}`;
+    const url = `http://localhost:3000/productos/actualizarProducto/${id}`;
     const datos = {
       producto: datosProducto.producto,
       descripcion: datosProducto.descripcion,

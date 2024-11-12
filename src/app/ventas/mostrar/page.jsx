@@ -32,6 +32,7 @@ export default async function Ventas(){
                         <th>Hora</th>
                         <th>Estatus</th>
                         <th>Actualizar estatus</th>
+                        <th>Editar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,6 +48,11 @@ export default async function Ventas(){
                                 <td>{venta.estatus}</td>
                                 <td>
                                     <EstatusVenta id={(venta.id)}/>
+                                </td>
+                                <td>
+                                    <Link href={`/ventas/editar/${venta.id}`}>
+                                    Editar
+                                    </Link>
                                 </td>
                             </tr>
                         ))

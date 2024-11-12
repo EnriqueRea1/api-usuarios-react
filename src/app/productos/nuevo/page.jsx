@@ -4,7 +4,7 @@ import axios from "axios";
 async function nuevoProducto(e){
     e.preventDefault();
     console.log("Estas en nuevoProducto");
-    const url="http://localhost:3000/nuevoProducto";
+    const url="http://localhost:3000/productos/nuevoProducto";
     const datos={
         producto:document.getElementById("producto").value,
         descripcion:document.getElementById("descripcion").value,
